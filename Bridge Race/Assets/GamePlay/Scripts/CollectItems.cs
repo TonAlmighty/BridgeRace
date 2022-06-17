@@ -24,7 +24,7 @@ public class CollectItems : MonoBehaviour
         
         itemToAdd.SetParent(itemHolderTransform, true);
 
-        itemToAdd.localPosition = new Vector3(0,1f*numOfItemsHolding,0);
+        itemToAdd.localPosition = new Vector3(0,0.4f*numOfItemsHolding,0);
         itemToAdd.localRotation = Quaternion.identity;
         numOfItemsHolding++;
     }
