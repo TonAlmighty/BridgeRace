@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class BrickPooler : MonoBehaviour
 {
-    
+    public int row, col; 
    public Vector3 initPos;
-   public float distanceX = -3f;
-   public float distanceY = 1f;
+   public float distanceX = -5f;
+   public float distanceY = 6f;
 
+    public List<string> mats = new List<string> {"red","blue","yellow" };
     // Start is called before the first frame update
     void Start()
     {
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < row; i++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < col; j++)
             {
                 //Debug.Log("alo");
                 Vector3 pos = Vector3.zero;
@@ -24,18 +25,36 @@ public class BrickPooler : MonoBehaviour
                 pos.x = x;
                 pos.z = y;
                 pos.y = 0.5f;
-                GameObject brick = (GameObject)ObjectPooler.SharedInstance.GetPooledObject();
 
-                Debug.Log(brick);
+               
 
-                brick.transform.position = new Vector3(1, 1, 1);
+                GameObject brick = (GameObject)ObjectPooler.SharedInstance.GetPooledObject(GetColor());
+
+                //Debug.Log(brick);
+
+                brick.transform.position = pos;
                 brick.SetActive(true);
             }
 
         }
     }
 
-   
+   public string GetColor()
+    {
+        int mat = Random.Range(0, 3);
+        Debug.Log(mat);
+        if (mat == 0)
+        {
+            return "red";
+        }else if(mat == 1)
+        {
+            return "blue";
+        }
+        else 
+        {
+            return "yellow";
+        }
+    }
 
     // Update is called once per frame
     void Update()
