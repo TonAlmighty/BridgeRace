@@ -8,14 +8,14 @@ public class ItemController : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-             CollectItems collectItem;
-            if(other.TryGetComponent(out collectItem))
-            {
-                collectItem.AddNewItems(transform);
-            }
+        //if (other.gameObject.CompareTag("Player"))
+        //{
+        //     CollectItems collectItem;
+        //    if(other.TryGetComponent(out collectItem))
+        //    {
+        //        collectItem.AddNewItems(transform);
+        //    }
            
-        }
+        //}
     }
 }

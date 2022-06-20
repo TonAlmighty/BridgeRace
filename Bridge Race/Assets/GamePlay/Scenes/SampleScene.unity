@@ -576,15 +576,15 @@ MonoBehaviour:
   itemsToPool:
   - objectToPool: {fileID: 1811639294392816263, guid: f8f8552c0a79776438fc6693003adfa6,
       type: 3}
-    amountToPool: 25
+    amountToPool: 10
     shouldExpand: 1
   - objectToPool: {fileID: 1811639294392816263, guid: 41ebcb29f418d3d40bf4dbc2f0883070,
       type: 3}
-    amountToPool: 25
+    amountToPool: 10
     shouldExpand: 1
   - objectToPool: {fileID: 1811639294392816263, guid: 778afd082a0e4c54ab991e46c4608aeb,
       type: 3}
-    amountToPool: 25
+    amountToPool: 10
     shouldExpand: 1
   pooledObjects: []
 --- !u!4 &1029326879
@@ -1367,6 +1367,7 @@ MonoBehaviour:
   itemHolderTransform: {fileID: 1841335716}
   numOfItemsHolding: 0
   listItems: []
+  tagBrick: blue
 --- !u!1 &1640898037
 GameObject:
   m_ObjectHideFlags: 0
