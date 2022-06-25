@@ -8,11 +8,17 @@ public class CollectItems : MonoBehaviour
     public Transform itemHolderTransform;
     public int numOfItemsHolding = 0;
     public List<GameObject> listItems;
+    
+
+    public Stack<GameObject> bricks;
+
     public string tagBrick="";
+    [SerializeField]
+    public BrickType brickType ;
     private Vector3 oldPos;
     void Start()
     {
-        
+        bricks = new Stack<GameObject>();
     }
 
     // Update is called once per frame
@@ -35,9 +41,7 @@ public class CollectItems : MonoBehaviour
     {
         if (other.gameObject.CompareTag(tagBrick))
         {
-             oldPos = other.gameObject.transform.position;
-
-            //StartCoroutine(RespawnBrick());
+            bricks.Push(other.gameObject);
            
             CollectItems collectItem;
             if (gameObject.TryGetComponent(out collectItem))
@@ -56,4 +60,10 @@ public class CollectItems : MonoBehaviour
         brick.SetActive(true);
     }
 
+    public void RemoveBrick()
+    {
+        GameObject brick = bricks.Pop();
+        Destroy(brick);
+        numOfItemsHolding--;
+    }
 }

@@ -5,23 +5,28 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    [Header("Player Controller")]
     private Rigidbody rb;
     public DynamicJoystick joystick;
     public Animator animator;
     public float moveSpeed;
     private Transform tf;
-    public static PlayerController ins;
 
-    public bool move = false;
+    public BrickType playerMatType;
+
+
+
     private void Awake()
     {
-        ins = this;
+     
+        rb = GetComponent<Rigidbody>();
+        tf = transform;
+       
     }
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        //animator = GetComponent<Animator>();
-        tf = transform;
+       
     }
 
     // Update is called once per frame
@@ -30,15 +35,20 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector3(joystick.Horizontal * moveSpeed,rb.velocity.y,joystick.Vertical*moveSpeed);
         if(joystick.Horizontal !=0 || joystick.Vertical != 0)
         {
-            move = true;
+           
             tf.rotation = Quaternion.LookRotation(rb.velocity);
-            animator.SetBool("IsRunning", true);
-            animator.SetBool("IsIdle", false);
+            animator.SetBool(Constant.ANIM_RUN, true);
+            animator.SetBool(Constant.ANIM_IDLE, false);
         }
         else
         {
-            animator.SetBool("IsRunning", false);
-            animator.SetBool("IsIdle", true);
+            animator.SetBool(Constant.ANIM_RUN, false);
+            animator.SetBool(Constant.ANIM_IDLE, true);
         }
+        
     }
+
+   
+   
+
 }

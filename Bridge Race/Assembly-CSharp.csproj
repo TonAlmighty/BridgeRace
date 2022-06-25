@@ -56,12 +56,16 @@
     <Analyzer Include="D:\Install\Visual Studio\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GamePlay\Scripts\BrickBridge.cs" />
     <Compile Include="Assets\GamePlay\Scripts\BrickPooler.cs" />
     <Compile Include="Assets\GamePlay\Scripts\CameraController.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\ChooseMaterial.cs" />
     <Compile Include="Assets\GamePlay\Scripts\CollectItems.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\Constant.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ItemController.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\GamePlay\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\StageSpawn.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
