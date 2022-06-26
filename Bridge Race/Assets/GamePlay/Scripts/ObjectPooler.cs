@@ -20,7 +20,15 @@ public class ObjectPooler : MonoBehaviour
 
     void Awake()
     {
-        SharedInstance = this;
+        if(SharedInstance == null)
+        {
+            SharedInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     // Use this for initialization
