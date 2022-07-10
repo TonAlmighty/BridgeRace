@@ -59,9 +59,11 @@
     <Compile Include="Assets\GamePlay\Scripts\BrickBridge.cs" />
     <Compile Include="Assets\GamePlay\Scripts\BrickPooler.cs" />
     <Compile Include="Assets\GamePlay\Scripts\CameraController.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\CheckStage.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ChooseMaterial.cs" />
     <Compile Include="Assets\GamePlay\Scripts\CollectItems.cs" />
     <Compile Include="Assets\GamePlay\Scripts\Constant.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\GameManager.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ItemController.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\GamePlay\Scripts\PlayerController.cs" />

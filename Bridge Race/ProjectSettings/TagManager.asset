@@ -9,6 +9,7 @@ TagManager:
   - yellow
   - blue
   - Spawn
+  - CheckStage
   layers:
   - Default
   - TransparentFX

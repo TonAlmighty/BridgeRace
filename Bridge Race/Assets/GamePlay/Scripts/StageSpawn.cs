@@ -27,14 +27,23 @@ namespace BridgeRace
 
         private void Spawn()
         {
-            var brickMove1 = Instantiate(brickMove, transform.position, transform.rotation);
-            brickMove.transform.localScale = new Vector3(8, 1, 2.5f);
-            brickMove1.transform.rotation = Quaternion.Euler(new Vector3(-20.9f,0,0)) ;
-            var stage = Instantiate(brickBridge, transform.position, transform.rotation);
-            stage.GetComponent<MeshRenderer>().material.color = ChooseMaterial.SetColor(playerItem.brickType);
+           
+                var brickMove1 = Instantiate(brickMove, transform.position, transform.rotation);
+                brickMove.transform.localScale = new Vector3(8, 1, 2.5f);
+                brickMove1.transform.rotation = Quaternion.Euler(new Vector3(-20.9f, 0, 0));
+                var stage = Instantiate(brickBridge, transform.position, transform.rotation);
+                stage.GetComponent<MeshRenderer>().material.color = ChooseMaterial.SetColor(playerItem.brickType);
 
-            Debug.Log(playerItem.brickType);
-            Destroy(gameObject);
+                Debug.Log(playerItem.brickType);
+                Destroy(gameObject);
+
+            if (CheckStage.ins.checkStage)
+            {
+                Destroy(stage);
+                Destroy(brickMove1);
+            }
+            
+          
         }
     }
 }

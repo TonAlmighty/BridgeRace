@@ -51,14 +51,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(rayPos.transform.position, rayPos.transform.TransformDirection(Vector3.forward), out hit,0.5f, layerMask))
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            Debug.Log("Did Hit");
-            //rb.AddForce(new Vector3(0, 10f, 0));
-        }
+        //RaycastHit hit;
+        //// Does the ray intersect any objects excluding the player layer
+        //if (Physics.Raycast(rayPos.transform.position, rayPos.transform.TransformDirection(Vector3.forward), out hit,0.5f, layerMask))
+        //{
+        //    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+        //    Debug.Log("Did Hit");
+        //    //rb.AddForce(new Vector3(0, 10f, 0));
+        //}
     }
 
 
