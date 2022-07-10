@@ -22,10 +22,7 @@ public class CollectItems : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
     public void AddNewItems(Transform itemToAdd)
     {

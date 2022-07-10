@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3411135627884890091}
   - component: {fileID: 6328518574723066556}
   - component: {fileID: 5703545215860077861}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StageSpawn
   m_TagString: Spawn
   m_Icon: {fileID: 0}
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8927542019384718434}
-  m_LocalRotation: {x: 0, y: -0.922112, z: 0, w: 0.38692322}
+  m_LocalRotation: {x: 0, y: -0.92211324, z: 0, w: 0.38692027}
   m_LocalPosition: {x: 3.8100188, y: 1.1251127, z: -0.29868138}
-  m_LocalScale: {x: 0.9, y: 0.2, z: 0.3}
+  m_LocalScale: {x: 6.6726, y: 0.21979937, z: 1.9736849}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -134.474, z: 0}
 --- !u!65 &3411135627884890091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72,4 +72,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brickBridge: {fileID: 841158576489173337, guid: a4022052bd735f449a495aaf44122fe8,
+    type: 3}
+  brickMove: {fileID: 1456649492909997257, guid: 9c45e50ce50e02a4b89305aabb2c6448,
     type: 3}

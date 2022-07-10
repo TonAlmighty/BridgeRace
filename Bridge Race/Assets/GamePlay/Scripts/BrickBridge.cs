@@ -5,19 +5,18 @@ using UnityEngine;
 public class BrickBridge : MonoBehaviour
 {
     public BrickType brickType;
+    public MeshRenderer meshRenderer;
     // Start is called before the first frame update
     void Start()
     {
+        meshRenderer = GetComponent<MeshRenderer>();
         SetColor();
     }
   
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+  
     public void SetColor()
     {
-        GetComponent<MeshRenderer>().material.color = ChooseMaterial.SetColor(brickType);
+        meshRenderer.material.color = ChooseMaterial.SetColor(brickType);
     }
 }

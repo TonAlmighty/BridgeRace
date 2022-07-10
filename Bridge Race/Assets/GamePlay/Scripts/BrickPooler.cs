@@ -14,6 +14,12 @@ public class BrickPooler : MonoBehaviour
     void Start()
     {
 
+        InitBrick();
+    }
+
+
+    private void InitBrick()
+    {
         for (int i = 0; i < row; i++)
         {
             for (int j = 0; j < col; j++)
@@ -25,13 +31,8 @@ public class BrickPooler : MonoBehaviour
                 pos.x = x;
                 pos.z = y;
                 pos.y = 0.5f;
-
-               
-
                 GameObject brick = (GameObject)ObjectPooler.SharedInstance.GetPooledObject(GetColor());
-
                 //Debug.Log(brick);
-
                 brick.transform.position = pos;
                 brick.SetActive(true);
             }

@@ -17,7 +17,8 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         tf = transform;
-        Offset = tf.position - target.position;
+        //Offset = tf.position - target.position;
+        Offset = new Vector3(0.33f, 13.5f, -14.7f);
     }
 
     void LateUpdate()

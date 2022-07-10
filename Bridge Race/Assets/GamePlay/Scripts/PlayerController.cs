@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public float moveSpeed;
     private Transform tf;
-
+    public LayerMask layerMask;
+    public GameObject rayPos;
     public BrickType playerMatType;
 
 
@@ -45,10 +46,21 @@ public class PlayerController : MonoBehaviour
             animator.SetBool(Constant.ANIM_RUN, false);
             animator.SetBool(Constant.ANIM_IDLE, true);
         }
-        
+
     }
 
-   
-   
+    private void Update()
+    {
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(rayPos.transform.position, rayPos.transform.TransformDirection(Vector3.forward), out hit,0.5f, layerMask))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.Log("Did Hit");
+            //rb.AddForce(new Vector3(0, 10f, 0));
+        }
+    }
+
+
 
 }

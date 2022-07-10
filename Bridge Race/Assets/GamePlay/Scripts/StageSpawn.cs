@@ -6,7 +6,8 @@ namespace BridgeRace
     {
         [SerializeField]
         private GameObject brickBridge;
-
+        [SerializeField]
+        private GameObject brickMove;
         private CollectItems playerItem;
 
         private void OnTriggerEnter(Collider other)
@@ -26,7 +27,9 @@ namespace BridgeRace
 
         private void Spawn()
         {
-
+            var brickMove1 = Instantiate(brickMove, transform.position, transform.rotation);
+            brickMove.transform.localScale = new Vector3(8, 1, 2.5f);
+            brickMove1.transform.rotation = Quaternion.Euler(new Vector3(-20.9f,0,0)) ;
             var stage = Instantiate(brickBridge, transform.position, transform.rotation);
             stage.GetComponent<MeshRenderer>().material.color = ChooseMaterial.SetColor(playerItem.brickType);
 
