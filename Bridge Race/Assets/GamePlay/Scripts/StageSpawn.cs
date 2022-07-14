@@ -39,8 +39,11 @@ namespace BridgeRace
 
             if (CheckStage.ins.checkStage)
             {
-                Destroy(stage);
-                Destroy(brickMove1);
+                //Destroy(stage);
+                //Destroy(brickMove1);
+
+                stage.SetActive(false);
+                brickMove1.SetActive(false);
             }
             
           

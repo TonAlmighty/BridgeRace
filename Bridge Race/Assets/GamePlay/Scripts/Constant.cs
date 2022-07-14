@@ -13,4 +13,5 @@ public class Constant : MonoBehaviour
     public const string RED_BRICK_TAG = "red";
     public const string YELLOW_BRICK_TAG = "yellow";
     public const string CHECK_STAGE = "CheckStage";
+    public const string FINISH = "Finish";
 }

@@ -67,6 +67,7 @@
     <Compile Include="Assets\GamePlay\Scripts\ItemController.cs" />
     <Compile Include="Assets\GamePlay\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\GamePlay\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\GamePlay\Scripts\SoundManager.cs" />
     <Compile Include="Assets\GamePlay\Scripts\StageSpawn.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
@@ -259,6 +260,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:\UnityProject\Unity 2019.4.38f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\UnityProject\Unity 2019.4.38f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -637,6 +641,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{37F0A7AF-6071-496A-9EF9-C86DE2291BFD}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
