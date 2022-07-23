@@ -26,10 +26,7 @@ public class PlayerController : MonoBehaviour
         tf = transform;
        
     }
-    void Start()
-    {
-       
-    }
+
 
     // Update is called once per frame
     void FixedUpdate()

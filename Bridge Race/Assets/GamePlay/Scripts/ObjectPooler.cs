@@ -39,7 +39,7 @@ public class ObjectPooler : MonoBehaviour
         {
             for (int i = 0; i < item.amountToPool; i++)
             {
-                GameObject obj = (GameObject)Instantiate(item.objectToPool);
+                GameObject obj = Instantiate(item.objectToPool);
                 obj.SetActive(false);
                 pooledObjects.Add(obj);
             }
@@ -50,7 +50,7 @@ public class ObjectPooler : MonoBehaviour
     {
         for (int i = 0; i < pooledObjects.Count; i++)
         {
-            if (!pooledObjects[i].activeInHierarchy && pooledObjects[i].tag == tag)
+            if (!pooledObjects[i].activeInHierarchy && pooledObjects[i].CompareTag(tag))
             {
                 return pooledObjects[i];
             }
@@ -71,9 +71,5 @@ public class ObjectPooler : MonoBehaviour
         return null;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+  
 }
