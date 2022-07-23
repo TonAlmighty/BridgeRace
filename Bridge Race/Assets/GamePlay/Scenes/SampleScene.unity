@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 39f2bd07b31bcd74c89d3a0cd65309f1, type: 2}
 --- !u!1 &87149785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,8 +1141,8 @@ GameObject:
   m_Name: Border (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &791872316
 Transform:
@@ -2108,8 +2108,8 @@ GameObject:
   m_Name: Border (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1218976296
 Transform:
@@ -2368,8 +2368,8 @@ GameObject:
   m_Name: Border (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1332984054
 Transform:
@@ -2874,7 +2874,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &1449429477
 MeshRenderer:
@@ -3659,8 +3659,8 @@ GameObject:
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1643409264
 Transform:
@@ -4008,8 +4008,8 @@ GameObject:
   m_Name: Border (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1897700817
 Transform:
@@ -4491,6 +4491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3c69285cd713e4189dd8a1ec9775ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movePosTransform: {fileID: 0}
   collectItem: {fileID: 2125602111}
 --- !u!114 &2125602111
 MonoBehaviour:
