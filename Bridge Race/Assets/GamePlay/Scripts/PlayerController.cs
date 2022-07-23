@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         {
            
             tf.rotation = Quaternion.LookRotation(rb.velocity);
+            SoundManager.ins.PlayStepSound();
             animator.SetBool(Constant.ANIM_RUN, true);
             animator.SetBool(Constant.ANIM_IDLE, false);
         }
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag(Constant.FINISH))
         {
             winPar.SetActive(true);
+            SoundManager.ins.PlayWinSound();
         }
     }
 

@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager: MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public AudioSource stepSound;
+    public AudioSource winSound;
+    public static SoundManager ins;
+
+    private void Awake()
     {
-        
+        ins = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayStepSound()
     {
-        
+        stepSound.Play();
     }
+
+    public void PlayWinSound()
+    {
+        winSound.Play();
+    }
+
 }
